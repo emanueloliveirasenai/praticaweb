@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+/*Configuração geral do corpo da página*/
+/*Ponto e vírgula simboliza fim da leitura do atributo*/
+
+body{
+    background-color: black;
+}
+h1{
+    color: blue;
+    padding: 10px;
+}
+p{
+    color: brown;
+}

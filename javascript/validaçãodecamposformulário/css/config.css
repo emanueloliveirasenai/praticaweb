@@ -1,0 +1,45 @@
+/*Configurações gerais*/
+body{
+    background-color: #66cc99;
+}
+section{
+    margin-top: 0px auto;
+}
+
+/*Configuação do formulário*/
+
+.cadbasico{
+    background-color: #b1ccf5;
+    width: 300px;
+    margin: 0px auto;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.cadbasico input{
+    margin: 5px auto;
+    width: 100%;
+    padding: 5px 0;
+}
+.cadbasico button{
+    width: 30%;
+    margin: 0 10%;
+    background-color: #b1ccf5;
+    font-weight: bold;
+    font-size: 16px;
+
+}
+
+label{
+    float: left;
+
+}
+
+h2{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    margin-top: 0px auto;
+    margin-bottom: 10px;
+    font-size: 50px;
+
+}
