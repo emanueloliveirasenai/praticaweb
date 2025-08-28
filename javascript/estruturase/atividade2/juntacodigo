@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividades 2</title>
+    <style>
+        /*Configurações Gerais*/
+        section{
+            margin-top: 0px auto;
+
+        }
+
+        /*Configurações da página*/
+        body{
+            background-color: #0abab5;
+            color: black;
+        }
+        .atv2Valid{
+            width: 300px;
+            margin: 0px auto;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .atv2Valid input{
+            margin: 5px;
+            width: 100%;
+            padding: 5px 0;
+            background-color: #66cdaa;
+        }
+        .atv2Valid button{
+            width: 30%;
+            margin: 0 10%;
+            background-color: #b1ccf5;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        button:hover{
+            background-color: aliceblue;
+        }
+        label{
+            float: left;
+        }
+        h2{
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: 10px;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h2>Estrutura "se" / "senao", Leitura de números</h2>
+        <font face="arial">
+            <form name="frmatv2" action="#" method="get" onsubmit="return validNum()">
+                <fieldset class="atv2Valid">
+                    <legend>Entrada de dados:</legend>
+                    <br>
+                    <label for="num1">Digite o 1º número:</label>
+                    <input type="text" name="txtnum1" id="num1">
+                    <br><br>
+                    <label for="num2">Digite o 2º número:</label>
+                    <input type="text" name="txtnum2" id="num2">
+                    <br>
+                    <button type="reset">Limpar</button><button type="submit">Enviar</button>
+                </fieldset>
+            </form>
+        </font>
+    </section>
+
+    <script>
+        function validNum(){
+    if(document.frmatv2.txtnum1.value == ""){
+
+        alert("Preencha o campo 1:")
+        document.frmatv2.txtnum1.focus();
+        return false;
+
+    }else if(document.frmatv2.txtnum2.value == ""){
+
+        alert("Preencha o campo 2:");
+        document.frmatv2.txtnum2.focus();
+        return false;
+
+    }else{
+        
+        let num1 = parseFloat(document.getElementById('num1').value);
+        let num2 = parseFloat(document.getElementById('num2').value);
+
+        if(num1 > num2){
+
+            alert("Número 1 é maior que Número 2!");
+
+        }else if(num1 < num2){
+
+            alert("Número 1 é menor que Número 2!");
+
+        }else{
+
+            alert("Os números 1 e 2 são iguais!")
+            
+        }
+    }
+}
+
+    </script>
+</body>
+</html>

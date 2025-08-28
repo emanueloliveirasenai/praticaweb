@@ -1,0 +1,172 @@
+            <!DOCTYPE html>
+            <html lang="pt-BR">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Atividade 3 - Do While</title>
+                <style>
+                    /*Configurações Gerais*/
+            section{
+                margin-top: 0px auto;
+
+            }
+
+            /*Configurações da página*/
+            body{
+                background-color: #0abab5;
+                color: black;
+            }
+            .cadinteiro {
+                width: 300px;
+                margin: 0px auto;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+            .cadinteiro input{
+                margin: 5px;
+                width: 100%;
+                padding: 5px 0;
+                background-color: #66cdaa;
+            }
+            .cadinteiro button{
+                width: 30%;
+                margin: 0 10%;
+                background-color: #b1ccf5;
+                font-weight: bold;
+                font-size: 16px;
+            }
+
+            .resultado{
+                width: 300px;
+                margin: 0px auto;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+
+
+            button:hover{
+                background-color: aliceblue;
+            }
+            label{
+                float: left;
+            }
+            h2{
+                text-align: center;
+                margin-top: 0px;
+                margin-bottom: 10px;
+                font-size: 50px;
+            }
+                </style>
+            </head>
+
+            <body>
+
+                <section>
+
+                    <h2>Atividade 3 - Do While</h2>
+                    <font face = "arial">
+                        
+                        
+                        <form name="frmnumint" action="#" method="get" onsubmit="return validaProc()">
+
+                            <fieldset class="cadinteiro">
+
+                                <legend>Digite o total de alunos por turma</legend>
+                                <br>
+
+                                <label for="numint">turma 1</label>
+                                <input type="text" name="txtnumint" id="numint"><br><br>
+
+                                <label for="numint">turma 2</label>
+                                <input type="text" name="txtnumint2" id="numint2"><br><br>
+                                
+                                <label for="numint">turma 3</label>
+                                <input type="text" name="txtnumint3" id="numint3"><br><br>                    
+
+                                <button type="reset">Limpar</button><button type="submit">Enviar</button>
+
+                            </fieldset>
+
+                        </form>   
+
+                    </font>
+
+                </section>
+
+                <script>
+                    function validaProc() {
+                // Verifica se o campo está vazio
+                if (
+                    document.getElementById('numint').value == "" || 
+                    document.getElementById('numint2').value == "" ||
+                    document.getElementById('numint3').value == ""
+                ) {
+                    alert("Preencha todos os campos");
+                    document.getElementById('numint').focus();
+                    return false;
+                } else {
+
+                    let numint = parseFloat(document.getElementById('numint').value);
+                    let numint2 = parseFloat(document.getElementById('numint2').value);
+                    let numint3 = parseFloat(document.getElementById('numint3').value);
+                    let turma1 = 0;
+                    let turma2 = 0;   
+                    let turma3 = 0;
+                    let somaturmas = 0;
+                    let mediageral;        
+
+                    console.log("TURMA 1");  
+                    let i = 1;
+                    do {
+                        let num = parseFloat((Math.random() * 10).toFixed(2));
+                        somaturmas += num;  
+                        console.log("Média aluno " + i + " = " + num);    
+                        if (num >= 7) {
+                            turma1++;
+                        }
+                        i++;
+                    } while (i <= numint);
+                    console.log("Qtde de alunos com média igual ou superior a 7 = " + turma1);   
+                    console.log("");
+
+                    console.log("TURMA 2");
+                    i = 1;
+                    do {
+                        let num = parseFloat((Math.random() * 10).toFixed(2));
+                        somaturmas += num;      
+                        console.log("Média aluno " + i + " = " + num);
+                        if (num >= 7) {
+                            turma2++;
+                        }
+                        i++;
+                    } while (i <= numint2);
+                    console.log("Qtde de alunos com média igual ou superior a 7 = " + turma2);
+                    console.log("");
+
+                    console.log("TURMA 3");
+                    i = 1;
+                    do {
+                        let num = parseFloat((Math.random() * 10).toFixed(2));
+                        somaturmas += num;      
+                        console.log("Média aluno " + i + " = " + num);
+                        if (num >= 7) {
+                            turma3++;
+                        }
+                        i++;
+                    } while (i <= numint3);
+                    console.log("Qtde de alunos com média igual ou superior a 7 = " + turma3);
+                    console.log("");
+                
+                    mediageral = somaturmas / (numint + numint2 + numint3);
+                    console.log("Média geral da escola = " + mediageral.toFixed(2));
+                    console.log("");   
+
+                    return false;
+                }    
+            }
+
+                </script>
+
+            </body>
+            </html>

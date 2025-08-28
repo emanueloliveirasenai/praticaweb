@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Estrutura CASO JavaScript - Atividade 1</title>
+    <style>
+        /*Configurações Gerais*/
+section{
+    margin-top: 0px auto;
+
+}
+body{
+    background-color: #0abab5;
+    color: black;
+}
+.atv1caso{
+    width: 300px;
+    margin: 0px auto;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.atv1caso input{
+    margin: 5px;
+    width: 100%;
+    padding: 5px 0;
+    background-color: #66cdaa;
+}
+.atv1caso button{
+    width: 30%;
+    margin: 0 10%;
+    background-color: #b1ccf5;
+    font-weight: bold;
+    font-size: 16px;
+}
+button:hover{
+    background-color: aliceblue;
+}
+label{
+    float: left;
+}
+h2{
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 50px;
+}
+    </style>
+</head>
+<body>
+    <section>
+        <h2>Validação de idade - Estrutura CASO</h2>
+        <font face="arial">
+            <form name="frmnumint" action="#" method="get" onsubmit="return procFormulario ()">
+                <fieldset class="atv1caso">
+                    <legend>Informe um número inteiro:</legend>
+                    <br>
+                    <label for="numint">Digite a idade:</label>
+                    <input type="text" name="txtnumint" id="numint">
+                    <br><br>
+                    <button type="reset">Limpar</button><button type="submit">Enviar</button>
+                </fieldset>
+            </form>
+        </font>
+    </section>
+
+    <script>
+        function procFormulario (){
+
+    if(document.getElementById('numint').value==""){
+        alert("Preencha o campo Número Inteiro");
+        document.frmnumint.focus();
+        return false;
+    }else{
+        let numint=parseInt(document.getElementById('numint').value);
+        switch(true)
+        {
+            case(numint >=0 && numint <=3):
+                console.log("Bebê");
+                return false;
+            break;
+            case(numint >=4 && numint <=10):
+                console.log("Criança");
+                return false;
+            break;
+            case(numint >=11 && numint <= 17):
+                console.log("Adolescente");
+                return false;
+            break;
+            default:
+                console.log("Adulto");
+                return false;
+            break;
+        }
+    }
+    
+}
+    </script>
+</body>
+</html>
