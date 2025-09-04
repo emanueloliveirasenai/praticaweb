@@ -6,25 +6,25 @@ o resultado deste cálculo deve ser armazenado em outro vetor, em suas respectiv
 posições. Como resultado deseja-se a impressão dos valores dos resultados dos 
 cálculos, armazenados no segundo vetor.*/
 
-function validaProc() {
-    let vetor = [];
-    let vetorResult = [];
-    let numInt = 0;
-    let i;
+        function validaProc() {
+            let vetor = [];
+            let vetorResult = [];
+            let numInt = 0;
+            let i;
 
-    for (i = 0; i < 5; i++) {
-        vetor[i] = parseInt(prompt("Insira o " + (i + 1) + "º Valor:"));
-    }
+            for (i = 0; i < 5; i++) {
+                vetor[i] = parseInt(prompt("Insira o " + (i + 1) + "º Valor:"));
+            }
 
-    numInt = parseInt(prompt("Insira o número para multiplicar os valores do vetor:"));
+            numInt = parseInt(prompt("Insira o número para multiplicar os valores do vetor:"));
 
-    for (i = 0; i < 5; i++) {
-        vetorResult[i] = vetor[i] * numInt;
-    }
+            for (i = 0; i < 5; i++) {
+                vetorResult[i] = vetor[i] * numInt;
+            }
 
-    for (i = 0; i < 5; i++) {
-        console.log("O resultado da multiplicação da posição " + (i+1) + " do vetor é: " + vetorResult[i]);
-    }
+            for (i = 0; i < 5; i++) {
+                console.log("O resultado da multiplicação da posição " + (i+1) + " do vetor é: " + vetorResult[i]);
+            }
 
-    return false;
-}
+            return false;
+        }

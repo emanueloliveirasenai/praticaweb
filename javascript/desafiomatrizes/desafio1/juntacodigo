@@ -1,0 +1,105 @@
+                <!DOCTYPE html>
+                <html lang="PT-BR">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Desafio 1</title>
+                    <style>
+                        /*Configurações Gerais*/
+                        section{
+                            margin-top: 0px auto;
+
+                        }
+
+                        /*Configurações da página*/
+                        body{
+                            background-color: #0abab5;
+                            color: black;
+                        }
+                        .cadinteiro {
+                            width: 300px;
+                            margin: 0px auto;
+                            font-weight: bold;
+                            margin-bottom: 10px;
+                        }
+                        .cadinteiro input{
+                            margin: 5px;
+                            width: 100%;
+                            padding: 5px 0;
+                            background-color: #66cdaa;
+                        }
+                        .cadinteiro button{
+                            width: 30%;
+                            margin: 0 10%;
+                            background-color: #b1ccf5;
+                            font-weight: bold;
+                            font-size: 16px;
+                        }
+
+                        .resultado{
+                            width: 300px;
+                            margin: 0px auto;
+                            font-weight: bold;
+                            margin-bottom: 10px;
+                        }
+
+
+
+                        button:hover{
+                            background-color: aliceblue;
+                        }
+                        label{
+                            float: left;
+                        }
+                        h2{
+                            text-align: center;
+                            margin-top: 0px;
+                            margin-bottom: 10px;
+                            font-size: 50px;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <section>
+                        <h2>Desafio 1 - Renda fixa e média do prédio.</h2>
+                        <font face="arial">
+                            <form name="frmnumint" id="#" method="get" onsubmit="return validaProc()">
+                                <fieldset class="cadinteiro">
+                                    <legend>Entrada de dados</legend>
+                                    <br>
+                                    <button type="submit">Enviar</button>
+                                </fieldset>
+                            </form>
+                        </font>
+                    </section>
+                    <script>
+                        function validaProc(){
+                            
+                            let matriz = [];
+                            let linha = 6;
+                            let coluna = 4;
+                            let rendaTotal = 0;
+                            let total = linha * coluna;
+                            let media = 0;
+
+                            for(i = 0; i < linha; i++){
+                                matriz[i] = [];
+                                for(c = 0; c < coluna; c++){
+                                    matriz[i][c] = Math.floor(Math.random() * 5000) + 1200;
+                                    rendaTotal = rendaTotal + matriz[i][c];
+                                    document.write("<br>Renda informada Ap " + (c+1) + " Andar " + (i+1) + " é: " + matriz[i][c]);
+                                }
+                                document.write("<br>")
+                            }
+
+                            media = rendaTotal / total;
+
+                            document.write("<br>A renda total do prédio é: " + rendaTotal + "<br>");
+                            document.write("A renda média do prédio é: " + (media.toFixed(2)));
+
+                            return false;
+
+                        }
+                    </script>
+                </body>
+                </html>

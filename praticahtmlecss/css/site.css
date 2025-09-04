@@ -1,6 +1,9 @@
 @charset "UTF-8";
 
 /*Configuração geral do corpo da página*/
+input::placeholder{
+        color: #999999;
+}
 
 body{
 

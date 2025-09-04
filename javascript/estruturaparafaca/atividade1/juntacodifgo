@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /*Configurações Gerais*/
+section{
+    margin-top: 0px auto;
+
+}
+
+/*Configurações da página*/
+body{
+    background-color: #0abab5;
+    color: black;
+}
+.tabuada {
+    width: 300px;
+    margin: 0px auto;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.tabuada input{
+    margin: 5px;
+    width: 100%;
+    padding: 5px 0;
+    background-color: #66cdaa;
+}
+.tabuada button{
+    width: 30%;
+    margin: 0 10%;
+    background-color: #b1ccf5;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.resultado{
+    width: 300px;
+    margin: 0px auto;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+
+button:hover{
+    background-color: aliceblue;
+}
+label{
+    float: left;
+}
+h2{
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 50px;
+}
+    </style>
+    <title>Estrutura para faca(for())</title>
+</head>
+<body>
+    <section>
+
+        <h2>Atividade 1 - Tabuada - Estrutura "para"... for()</h2>
+        <font face="arial">
+
+            <form name="frmnumint" action="#" method="get" onsubmit="return validaProc()">
+                <fieldset class="tabuada">
+
+                    <legend>Entrada de Dados:</legend>
+                    <br>
+                    <label for="numint">Número:</label>
+                    <input type="text" id="numint" name="numint">
+                    <button type="submit">Enviar</button><button type="reset">Limpar</button>
+                </fieldset>
+
+
+               <!-- <fieldset class="resultado">
+                    <legend>Resultado:</legend>
+                    <label id="resultado"></label>
+                </fieldset> -->
+            </form>
+        </font>
+        
+    </section>
+    <script>
+        function validaProc(){
+
+    if(document.getElementById('numint').value == ""){
+        alert("Preencha o campo Número:");
+        document.frmnumint.numint.focus();
+        return false;
+    }else{
+
+        let numint=parseInt(document.getElementById('numint').value);
+        for(let i=0; i<11; i++){
+            console.log(numint, " x ", i,  "=" , numint * i);
+
+        //    document.getElementById('resultado').innerText = (numint + " x " + i +  "=" + (numint * i));
+        }
+        return false;
+    }
+}
+    </script>
+</body>
+</html>

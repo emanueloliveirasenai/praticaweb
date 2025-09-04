@@ -4,35 +4,35 @@ um valor inteiro qualquer. A solução deverá fazer uma busca do valor, informa
 usuário, no vetor e imprima a posição em que este foi encontrado ou se não foi 
 encontrado.*/
 
-function validaProc(){
+    function validaProc(){
 
-    let vetor = [];
-    let busca = 0;
-    let i;
-    let validacao = false;
-    let posicao = 0;
-
-    for(i = 0; i < 10; i++){
-        vetor[i] = parseInt(prompt("Insira o " + (i+1) + "º número: "));
-        console.log("O valor inserido foi: " + vetor[i]);
-    }
-
-    while(validacao == false){
-
-        busca = parseInt(prompt("Digite o número que você deseja procurar no vetor: "));
+        let vetor = [];
+        let busca = 0;
+        let i;
+        let validacao = false;
+        let posicao = 0;
 
         for(i = 0; i < 10; i++){
-        if(busca == vetor[i]){
-            posicao = i;
-            validacao = true;
+            vetor[i] = parseInt(prompt("Insira o " + (i+1) + "º número: "));
+            console.log("O valor inserido foi: " + vetor[i]);
         }
+
+        while(validacao == false){
+
+            busca = parseInt(prompt("Digite o número que você deseja procurar no vetor: "));
+
+            for(i = 0; i < 10; i++){
+            if(busca == vetor[i]){
+                posicao = i;
+                validacao = true;
+            }
+            }
+            if(validacao == false){
+                alert("Número não encontrado!")
+            }
         }
-        if(validacao == false){
-            alert("Número não encontrado!")
-        }
+
+        console.log("Número " + busca + " encontrado na posição " + posicao + " do vetor!")
+
+        return false;
     }
-
-    console.log("Número " + busca + " encontrado na posição " + posicao + " do vetor!")
-
-    return false;
-}
